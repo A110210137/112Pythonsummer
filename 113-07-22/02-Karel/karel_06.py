@@ -1,0 +1,23 @@
+from stanfordkarel import *
+import os
+
+def put_5_beepers():
+    for i in range(5):
+        put_beeper()
+
+def move_to_next_cornner():
+    move()
+    move()
+    move()
+    turn_left()
+
+def main():
+    """ Karel code goes here! """
+    for i in range(4):
+        put_5_beepers()
+        move_to_next_cornner()
+
+    pass
+
+if __name__ == "__main__":
+    run_karel_program(os.path.join(os.getcwd(), 'worlds/karel_06'))
